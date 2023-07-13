@@ -9,6 +9,10 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
     
+    <dependencies>
+        <!-- Add any dependencies your web application requires -->
+    </dependencies>
+    
     <build>
         <plugins>
             <plugin>
@@ -16,7 +20,11 @@
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.2</version>
                 <configuration>
-                    <warSourceDirectory>src/main/webapp</warSourceDirectory>
+                    <webResources>
+                        <resource>
+                            <directory>src/main/webapp</directory>
+                        </resource>
+                    </webResources>
                 </configuration>
             </plugin>
         </plugins>
